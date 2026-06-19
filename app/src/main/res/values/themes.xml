@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.AITower" parent="android:Theme.Material.NoActionBar">
+    <style name="Theme.DragRacer" parent="android:Theme.Material.NoActionBar">
         <item name="android:colorBackground">#0A1024</item>
-        <item name="android:colorPrimary">#4A9EFF</item>
-        <item name="android:colorAccent">#F2C14E</item>
     </style>
 </resources>
