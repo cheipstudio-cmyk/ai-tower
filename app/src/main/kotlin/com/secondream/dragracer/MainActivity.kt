@@ -45,9 +45,19 @@ fun CarViewer() {
                 ModelNode(modelInstance = instance, scaleToUnits = 2.0f)
             }
             LightNode(
+                engine = engine,
+                type = LightManager.Type.DIRECTIONAL,
                 apply = {
-                    type(LightManager.Type.DIRECTIONAL)
-                    intensity(120_000f)
+                    intensity(150_000f)
+                    direction(0.4f, -1.0f, -0.6f)
+                }
+            )
+            LightNode(
+                engine = engine,
+                type = LightManager.Type.DIRECTIONAL,
+                apply = {
+                    intensity(80_000f)
+                    direction(-0.5f, -0.3f, 0.5f)
                 }
             )
         }
