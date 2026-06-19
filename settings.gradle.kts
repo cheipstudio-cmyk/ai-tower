@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AIIdler"
+rootProject.name = "AITower"
 include(":app")

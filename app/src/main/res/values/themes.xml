@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.AIIdler" parent="android:Theme.Material.NoActionBar">
-        <item name="android:colorBackground">#0B0B0D</item>
+    <style name="Theme.AITower" parent="android:Theme.Material.NoActionBar">
+        <item name="android:colorBackground">#0A1024</item>
         <item name="android:colorPrimary">#4A9EFF</item>
-        <item name="android:colorAccent">#D9A85C</item>
+        <item name="android:colorAccent">#F2C14E</item>
     </style>
 </resources>

@@ -1,4 +1,4 @@
-package com.secondream.aiidler
+package com.secondream.aitower
 
 import android.content.Context
 import android.os.VibrationEffect
@@ -9,18 +9,22 @@ class HapticManager(private val context: Context) {
     var enabled: Boolean = true
     private val vibrator: Vibrator? = context.getSystemService()
 
-    fun tap() {
+    fun light() {
         if (!enabled) return
-        vibrate(20)
+        vibrate(18)
     }
 
-    fun breakthrough() {
+    fun perfect() {
+        if (!enabled) return
+        vibrate(30)
+    }
+
+    fun gameOver() {
         if (!enabled) return
         try {
-            val timings = longArrayOf(0, 90, 60, 50, 60, 110)
-            val amplitudes = intArrayOf(0, 200, 0, 120, 0, 255)
-            val effect = VibrationEffect.createWaveform(timings, amplitudes, -1)
-            vibrator?.vibrate(effect)
+            val timings = longArrayOf(0, 90, 60, 120)
+            val amplitudes = intArrayOf(0, 200, 0, 255)
+            vibrator?.vibrate(VibrationEffect.createWaveform(timings, amplitudes, -1))
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -28,8 +32,7 @@ class HapticManager(private val context: Context) {
 
     private fun vibrate(ms: Long) {
         try {
-            val effect = VibrationEffect.createOneShot(ms, VibrationEffect.DEFAULT_AMPLITUDE)
-            vibrator?.vibrate(effect)
+            vibrator?.vibrate(VibrationEffect.createOneShot(ms, VibrationEffect.DEFAULT_AMPLITUDE))
         } catch (e: Exception) {
             e.printStackTrace()
         }

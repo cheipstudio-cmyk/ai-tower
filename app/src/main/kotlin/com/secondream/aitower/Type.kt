@@ -1,4 +1,4 @@
-package com.secondream.aiidler
+package com.secondream.aitower
 
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
